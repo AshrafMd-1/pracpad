@@ -7,8 +7,8 @@ if (require('electron-squirrel-startup')) {
 
 const createWindow = () => {
   const {width: screenWidth, height: screenHeight} = screen.getPrimaryDisplay().workAreaSize;
-  const windowWidth = 550;
-  const windowHeight = 300;
+  const windowWidth = 300;
+  const windowHeight = 200;
 
   const x = screenWidth - windowWidth;
   const y = screenHeight - windowHeight;
@@ -16,6 +16,7 @@ const createWindow = () => {
     minWidth: 250,
     minHeight: 130,
     frame: false,
+    icon: path.join(__dirname, 'icon.ico'),
     width: windowWidth,
     height: windowHeight,
     x: x,

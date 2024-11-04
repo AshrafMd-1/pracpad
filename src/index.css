@@ -56,7 +56,7 @@ button {
     height: 36px;
     justify-content: start;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
     background-color: lightgoldenrodyellow;
     -webkit-app-region: drag;
 }
@@ -79,7 +79,7 @@ button {
     cursor: pointer;
     -webkit-app-region: no-drag;
     color: black;
-    padding: 0 15px;
+    padding: 0 12px;
     display: flex;
     justify-content: center;
     align-items: center;
