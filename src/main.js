@@ -15,6 +15,7 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     minWidth: 250,
     minHeight: 130,
+    frame: false,
     width: windowWidth,
     height: windowHeight,
     x: x,
@@ -53,3 +54,16 @@ app.on('window-all-closed', () => {
   }
 });
 
+ipcMain.on('window-close', () => {
+  const activeWindow = BrowserWindow.getFocusedWindow();
+  if (activeWindow) {
+    activeWindow.close();
+  }
+});
+
+ipcMain.on('window-minimize', () => {
+  const activeWindow = BrowserWindow.getFocusedWindow();
+  if (activeWindow) {
+    activeWindow.minimize();
+  }
+});

@@ -9,17 +9,26 @@
     ></script>
 </head>
 <body>
-<div class="controls-container">
-    <div class="font-size">
-        <label for="fontSize">Size</label>
-        <input id="fontSize" max="72" min="1" title="Font Size" type="number" value="16"/>
-    </div>
-    <div class="button-container">
-        <button id="reload" title="Reload"><i class="fas fa-sync"></i></button>
-        <button class="always-on-top-off" id="always-on-top" title="toggle always on top"><i
-                class="fa-solid fa-ban"></i></button>
-    </div>
+<div class="title-bar">
 
+
+    <div class="controls-container">
+        <div class="font-size">
+            <input id="fontSize" max="72" min="1" title="Font Size" type="number" value="16"/>
+        </div>
+        <div class="button-container">
+            <button id="refresh" title="Refresh"><i class="fas fa-sync"></i></button>
+            <button class="always-on-top-off" id="always-on-top" title="toggle always on top"><i
+                    class="fa-solid fa-ban"></i></button>
+        </div>
+    </div>
+    <div class="window-button-container">
+        <div class="window-button" id="window-minimize">
+            <i class="fa-solid fa-window-minimize"></i>
+        </div>
+        <div class="window-button" id="window-close"
+        ><i class="fa-solid fa-x"></i></div>
+    </div>
 </div>
 <div class="apply-font" contenteditable="true" id="editor" spellcheck="false"></div>
 <script src="/src/renderer.js" type="module"></script>
