@@ -1,7 +1,8 @@
 const {app, BrowserWindow, screen, ipcMain} = require('electron');
 const path = require('node:path');
+import started from 'electron-squirrel-startup';
 
-if (require('electron-squirrel-startup')) {
+if (started) {
   app.quit();
 }
 
