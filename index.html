@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>PracPad</title>
+    <script
+            crossorigin="anonymous"
+            src="https://kit.fontawesome.com/cbe18769d6.js"
+    ></script>
+</head>
+<body>
+<div class="controls-container">
+    <div class="font-size">
+        <label for="fontSize">Font Size</label>
+        <input id="fontSize" type="number" title="Font Size" value="16" min="1" max="72"/>
+    </div>
+    <button id="reload" title="Reload"><i class="fas fa-sync"></i></button>
+</div>
+<div contenteditable="true" id="editor" class="apply-font"></div>
+<script type="module" src="/src/renderer.js"></script>
+</body>
+</html>
