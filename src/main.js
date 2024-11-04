@@ -1,4 +1,4 @@
-const { app, BrowserWindow,screen } = require('electron');
+const {app, BrowserWindow, screen, ipcMain} = require('electron');
 const path = require('node:path');
 
 if (require('electron-squirrel-startup')) {
@@ -6,13 +6,15 @@ if (require('electron-squirrel-startup')) {
 }
 
 const createWindow = () => {
-  const { width: screenWidth, height: screenHeight } = screen.getPrimaryDisplay().workAreaSize;
+  const {width: screenWidth, height: screenHeight} = screen.getPrimaryDisplay().workAreaSize;
   const windowWidth = 550;
   const windowHeight = 300;
 
   const x = screenWidth - windowWidth;
   const y = screenHeight - windowHeight;
   const mainWindow = new BrowserWindow({
+    minWidth: 250,
+    minHeight: 130,
     width: windowWidth,
     height: windowHeight,
     x: x,
@@ -30,8 +32,9 @@ const createWindow = () => {
     mainWindow.loadFile(path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`));
   }
 
-  mainWindow.setAlwaysOnTop(true, 'screen');
-
+  ipcMain.on("always-on-top", () => {
+    mainWindow.setAlwaysOnTop(!mainWindow.isAlwaysOnTop(), "screen");
+  });
 };
 
 app.whenReady().then(() => {

@@ -3,10 +3,9 @@ body {
     Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-y: hidden;
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -16,56 +15,87 @@ body {
     width: 100%;
     height: 100vh;
     border: none;
-    padding-top: 60px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 40px 10px 10px;
     outline: none;
     font-family: 'Arial', sans-serif;
     letter-spacing: 0.1rem;
-    line-height: 1.15rem;
     color: black;
     resize: none;
     font-size: 16px;
 }
 
-.controls-container{
+
+.fas {
+    cursor: pointer;
+}
+
+button {
+    padding: 0.3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+#reload {
+    background-color: #007bff;
+    color: white;
+}
+
+#save {
+    background-color: #0056b3;
+    color: white;
+}
+
+.controls-container {
     display: flex;
     position: fixed;
     width: 100%;
-    height: 50px;
-    justify-content: space-evenly;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     padding: 8px;
     background-color: lightgoldenrodyellow;
 }
 
-.fas{
-    cursor: pointer;
+.font-size {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-select{
-    padding: 0.2rem;
+label {
+    font-size: 1.1rem;
+}
+
+input {
+    padding: 0.3rem;
     border: 1px solid #ccc;
     outline: none;
-    width: 100px;
-}
-
-input{
-    padding: 0.2rem;
-    border: 1px solid #ccc;
-    outline: none;
-    width: 50px;
-}
-
-button{
-    padding: 0.5rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
     font-size: 1rem;
 }
 
-button:hover{
-    background-color: #0056b3;
+.always-on-top-on {
+    background-color: #d55a5a;
+    color: #fff;
+}
+
+.always-on-top-on:hover {
+    background-color: #d54343;
+}
+
+.always-on-top-off {
+    background-color: #1ea814;
+    color: #fff;
+}
+
+.always-on-top-off:hover {
+    background-color: #14810a;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
 }
